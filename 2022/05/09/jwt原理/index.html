@@ -16,29 +16,29 @@
   <meta name="author" content="Yaxing G.">
   <meta name="keywords" content="">
   
-    <meta name="description" content="JWT 摘要 JWT的原理和流程 跨域认证的问题 JWT 的原理 与session的区别 JWT认证流程图 JWT的6个优缺点   JWT的数据结构 消息组成 头部(header) 载荷(payload) 签名（signature) JWT的用法   cookie session cookie Session Session一致性问题 Session一致性解决方案JWTJSON Web Toke">
+    <meta name="description" content="JWTJSON Web Token（缩写 JWT）是目前最流行的跨域认证解决方案 摘要** JWT将所有数据都保存在客户端，服务器认证以后，生成一个 JSON 对象，发回给用户，以后，用户与服务端通信的时候，都要发回这个 JSON 对象。服务器完全只靠这个对象认定用户身份。为了防止用户篡改数据，服务器在生成这个对象的时候，会加上签名。服务器变成无状态了，从而比较容易实现扩展。 JWT是为了网络应用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jwt原理">
-<meta property="og:url" content="http://example.com/2022/05/09/JWT/index.html">
+<meta property="og:url" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/index.html">
 <meta property="og:site_name" content="X.FreeNotes">
-<meta property="og:description" content="JWT 摘要 JWT的原理和流程 跨域认证的问题 JWT 的原理 与session的区别 JWT认证流程图 JWT的6个优缺点   JWT的数据结构 消息组成 头部(header) 载荷(payload) 签名（signature) JWT的用法   cookie session cookie Session Session一致性问题 Session一致性解决方案JWTJSON Web Toke">
+<meta property="og:description" content="JWTJSON Web Token（缩写 JWT）是目前最流行的跨域认证解决方案 摘要** JWT将所有数据都保存在客户端，服务器认证以后，生成一个 JSON 对象，发回给用户，以后，用户与服务端通信的时候，都要发回这个 JSON 对象。服务器完全只靠这个对象认定用户身份。为了防止用户篡改数据，服务器在生成这个对象的时候，会加上签名。服务器变成无状态了，从而比较容易实现扩展。 JWT是为了网络应用">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2022/05/09/JWT/img/jtwProcess.png">
-<meta property="og:image" content="http://example.com/2022/05/09/JWT/img/屏幕截图%202022-03-16%20143317.png">
-<meta property="og:image" content="http://example.com/2022/05/09/JWT/img/屏幕截图%202022-03-16%20143551.png">
-<meta property="og:image" content="http://example.com/2022/05/09/JWT/img/屏幕截图%202022-03-16%20143853.png">
-<meta property="og:image" content="http://example.com/2022/05/09/JWT/img/屏幕截图%202022-03-16%20144016.png">
-<meta property="og:image" content="http://example.com/2022/05/09/JWT/img/屏幕截图%202022-03-16%20144304.png">
-<meta property="og:image" content="http://example.com/2022/05/09/JWT/img/屏幕截图%202022-03-16%20144554.png">
-<meta property="og:image" content="http://example.com/2022/05/09/JWT/img/屏幕截图%202022-03-16%20144812.png">
-<meta property="og:image" content="http://example.com/2022/05/09/JWT/img/屏幕截图%202022-03-16%20145008.png">
-<meta property="og:image" content="http://example.com/2022/05/09/JWT/img/屏幕截图%202022-03-16%20150041.png">
-<meta property="article:published_time" content="2022-05-09T03:22:09.820Z">
-<meta property="article:modified_time" content="2022-05-09T03:24:04.379Z">
+<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/img/jtwProcess.png">
+<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/img/屏幕截图%202022-03-16%20143317.png">
+<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/img/屏幕截图%202022-03-16%20143551.png">
+<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/img/屏幕截图%202022-03-16%20143853.png">
+<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/img/屏幕截图%202022-03-16%20144016.png">
+<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/img/屏幕截图%202022-03-16%20144304.png">
+<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/img/屏幕截图%202022-03-16%20144554.png">
+<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/img/屏幕截图%202022-03-16%20144812.png">
+<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/img/屏幕截图%202022-03-16%20145008.png">
+<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/img/屏幕截图%202022-03-16%20150041.png">
+<meta property="article:published_time" content="2022-05-09T03:35:06.000Z">
+<meta property="article:modified_time" content="2022-05-09T03:35:55.211Z">
 <meta property="article:author" content="Yaxing G.">
 <meta property="article:tag" content="原创">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/2022/05/09/JWT/img/jtwProcess.png">
+<meta name="twitter:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/img/jtwProcess.png">
   
   
   <title>jwt原理 - X.FreeNotes</title>
@@ -215,7 +215,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-05-09 11:22" pubdate>
+        <time datetime="2022-05-09 11:35" pubdate>
           May 9, 2022 am
         </time>
       </span>
@@ -227,7 +227,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          7.2k words
+          7.1k words
         
       </span>
     
@@ -239,7 +239,7 @@
         
         
           <!-- compatible with older versions-->
-          61 min
+          59 min
         
       </span>
     
@@ -289,35 +289,7 @@
             
             <div class="markdown-body">
               
-              <ul>
-<li><a href="#jwt">JWT</a><ul>
-<li><a href="#%E6%91%98%E8%A6%81">摘要</a></li>
-<li><a href="#jwt%E7%9A%84%E5%8E%9F%E7%90%86%E5%92%8C%E6%B5%81%E7%A8%8B">JWT的原理和流程</a><ul>
-<li><a href="#%E8%B7%A8%E5%9F%9F%E8%AE%A4%E8%AF%81%E7%9A%84%E9%97%AE%E9%A2%98">跨域认证的问题</a></li>
-<li><a href="#jwt-%E7%9A%84%E5%8E%9F%E7%90%86">JWT 的原理</a></li>
-<li><a href="#%E4%B8%8Esession%E7%9A%84%E5%8C%BA%E5%88%AB">与session的区别</a></li>
-<li><a href="#jwt%E8%AE%A4%E8%AF%81%E6%B5%81%E7%A8%8B%E5%9B%BE">JWT认证流程图</a></li>
-<li><a href="#jwt%E7%9A%846%E4%B8%AA%E4%BC%98%E7%BC%BA%E7%82%B9">JWT的6个优缺点</a></li>
-</ul>
-</li>
-<li><a href="#jwt%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">JWT的数据结构</a><ul>
-<li><a href="#%E6%B6%88%E6%81%AF%E7%BB%84%E6%88%90">消息组成</a></li>
-<li><a href="#%E5%A4%B4%E9%83%A8header">头部(header)</a></li>
-<li><a href="#%E8%BD%BD%E8%8D%B7payload">载荷(payload)</a></li>
-<li><a href="#%E7%AD%BE%E5%90%8Dsignature">签名（signature)</a></li>
-<li><a href="#jwt%E7%9A%84%E7%94%A8%E6%B3%95">JWT的用法</a></li>
-</ul>
-</li>
-<li><a href="#cookie-session">cookie session</a><ul>
-<li><a href="#cookie">cookie</a></li>
-<li><a href="#session">Session</a></li>
-<li><a href="#session%E4%B8%80%E8%87%B4%E6%80%A7%E9%97%AE%E9%A2%98">Session一致性问题</a></li>
-<li><a href="#session%E4%B8%80%E8%87%B4%E6%80%A7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">Session一致性解决方案</a><h2 id="JWT"><a href="#JWT" class="headerlink" title="JWT"></a>JWT</h2>JSON Web Token（缩写 JWT）是目前最流行的<strong>跨域认证解决方案</strong></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+              <h2 id="JWT"><a href="#JWT" class="headerlink" title="JWT"></a>JWT</h2><p>JSON Web Token（缩写 JWT）是目前最流行的<strong>跨域认证解决方案</strong></p>
 <h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>** JWT将所有数据都保存在客户端，服务器认证以后，生成一个 JSON 对象，发回给用户，以后，用户与服务端通信的时候，都要发回这个 JSON 对象。服务器完全只靠这个对象认定用户身份。为了防止用户篡改数据，服务器在生成这个对象的时候，会加上签名。服务器变成无状态了，从而比较容易实现扩展。</p>
 <p>JWT是为了网络应用环境间传递声明而执行的一种基于JSON的开发标准, 特别适用于分布式站点的单点登陆（SSO）场景。</p>
 <p>JWT的声明一般被用来在身份提供者和服务提供者间传递被认证的用户身份信息，以便于从资源服务器获取资源，也可以增加一些额外的其它业务逻辑所必须的声明信息，该token也可直接被用于认证，也可被加密。</p>
@@ -543,7 +515,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>jwt原理</div>
-      <div>http://example.com/2022/05/09/JWT/</div>
+      <div>http://example.com/2022/05/09/jwt原理/</div>
     </div>
     <div class="license-meta">
       
@@ -585,18 +557,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/05/09/jwt%E5%8E%9F%E7%90%86/" title="jwt原理">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">jwt原理</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/05/08/java%E6%B3%9B%E5%9E%8B%E9%97%AE%E9%A2%98/" title="java 泛型十问">
-                        <span class="hidden-mobile">java 泛型十问</span>
+                      <a href="/2022/05/09/JWT/" title="jwt原理">
+                        <span class="hidden-mobile">jwt原理</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
