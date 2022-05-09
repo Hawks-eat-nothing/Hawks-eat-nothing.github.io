@@ -23,22 +23,22 @@
 <meta property="og:site_name" content="X.FreeNotes">
 <meta property="og:description" content="JWTJSON Web Token（缩写 JWT）是目前最流行的跨域认证解决方案 摘要** JWT将所有数据都保存在客户端，服务器认证以后，生成一个 JSON 对象，发回给用户，以后，用户与服务端通信的时候，都要发回这个 JSON 对象。服务器完全只靠这个对象认定用户身份。为了防止用户篡改数据，服务器在生成这个对象的时候，会加上签名。服务器变成无状态了，从而比较容易实现扩展。 JWT是为了网络应用">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/img/jtwProcess.png">
-<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/img/屏幕截图%202022-03-16%20143317.png">
-<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/img/屏幕截图%202022-03-16%20143551.png">
-<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/img/屏幕截图%202022-03-16%20143853.png">
-<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/img/屏幕截图%202022-03-16%20144016.png">
-<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/img/屏幕截图%202022-03-16%20144304.png">
-<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/img/屏幕截图%202022-03-16%20144554.png">
-<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/img/屏幕截图%202022-03-16%20144812.png">
-<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/img/屏幕截图%202022-03-16%20145008.png">
-<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/img/屏幕截图%202022-03-16%20150041.png">
+<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/jtwProcess.png">
+<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/屏幕截图%202022-03-16%20143317.png">
+<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/屏幕截图%202022-03-16%20143551.png">
+<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/屏幕截图%202022-03-16%20143853.png">
+<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/屏幕截图%202022-03-16%20144016.png">
+<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/屏幕截图%202022-03-16%20144304.png">
+<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/屏幕截图%202022-03-16%20144554.png">
+<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/屏幕截图%202022-03-16%20144812.png">
+<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/屏幕截图%202022-03-16%20145008.png">
+<meta property="og:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/屏幕截图%202022-03-16%20150041.png">
 <meta property="article:published_time" content="2022-05-09T03:35:06.000Z">
-<meta property="article:modified_time" content="2022-05-09T03:35:55.211Z">
+<meta property="article:modified_time" content="2022-05-09T05:57:21.889Z">
 <meta property="article:author" content="Yaxing G.">
 <meta property="article:tag" content="原创">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/img/jtwProcess.png">
+<meta name="twitter:image" content="http://example.com/2022/05/09/jwt%E5%8E%9F%E7%90%86/jtwProcess.png">
   
   
   <title>jwt原理 - X.FreeNotes</title>
@@ -318,7 +318,7 @@
 <li>session 只存在一台服务器上，那么下次请求就必须请求这台服务器，不利于分布式应用</li>
 <li>存储在客户端的 JWT 比存储在服务端的 session 更具有扩展性</li>
 </ol>
-<h4 id="JWT认证流程图"><a href="#JWT认证流程图" class="headerlink" title="JWT认证流程图"></a>JWT认证流程图</h4><img src=".\img\jtwProcess.png" srcset="/img/loading.gif" lazyload style="zoom:60%;" />
+<h4 id="JWT认证流程图"><a href="#JWT认证流程图" class="headerlink" title="JWT认证流程图"></a>JWT认证流程图</h4><img src="jtwProcess.png" srcset="/img/loading.gif" lazyload style="zoom:60%;" />
 
 <ol>
 <li>浏览器发起请求登录，携带用户名和密码；</li>
@@ -367,23 +367,23 @@
 <p>这里的redis只存储tokenId的黑名单，同时redis也可以分布式部署，读写分离。token认证服务器操作redis的master，其他redis同步master的数据。</p>
 <h3 id="cookie-session"><a href="#cookie-session" class="headerlink" title="cookie session"></a>cookie session</h3><h4 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h4><p>Cookie是浏览器保存在用户电脑上的一小段文本，用来保存用户在网站上的必要的信息。Web页面或服务器告诉浏览器按照一定的规范存储这些信息，并且在以后的所有请求中，这些信息就会自动加在http请求头中发送给服务器，服务器根据这些信息判断不同的用户。</p>
 <div align="center">
-<img src="./img/屏幕截图%202022-03-16%20143317.png" srcset="/img/loading.gif" lazyload width=500>
+<img src="屏幕截图%202022-03-16%20143317.png" srcset="/img/loading.gif" lazyload width=500>
 </div>
 
 <p>Cookie相当于服务器给每个客户端都贴上了一个小纸条，上面记录了服务器给我们返回的一些信息，然后服务器看到这张小纸条就知道我们是谁了。</p>
 <p>Cookie主要用途：在客户端设置一些信息用于后续验证用户的登录状态。</p>
 <div align="center">
-<img src="./img/屏幕截图%202022-03-16%20143551.png" srcset="/img/loading.gif" lazyload width=500>
+<img src="屏幕截图%202022-03-16%20143551.png" srcset="/img/loading.gif" lazyload width=500>
 </div>
 
 <h4 id="Session"><a href="#Session" class="headerlink" title="Session"></a>Session</h4><p>用户使用网站的服务，需要使用浏览器与Web服务器进行多次交互。HTTP协议本身是无状态的，需要基于HTTP协议支持会话状态（Session State）的机制。具体的实现方式是：在会话开始时，分配一个 唯一的会话标识（SessionID），并通过Cookie将这个标识告诉浏览器，以后每次请求的时候，浏览器都会带上这个会话标识SessionID来告诉Web服务器这个请求是属于哪个会话的。在Web服务器上，各个会话都有独立的存储，保存不同会话的信息。如果遇到禁用Cookie的情况，一般的做法就是把这个会话标识放到URL的参数中</p>
 <div align="center">
-<img src="./img/屏幕截图%202022-03-16%20143853.png" srcset="/img/loading.gif" lazyload >
+<img src="屏幕截图%202022-03-16%20143853.png" srcset="/img/loading.gif" lazyload >
 </div>
 
 <h4 id="Session一致性问题"><a href="#Session一致性问题" class="headerlink" title="Session一致性问题"></a>Session一致性问题</h4><p>当Web服务器从一台变为多台时，就会出现Session一致性问题。</p>
 <div align="center">
-<img src="./img/屏幕截图%202022-03-16%20144016.png" srcset="/img/loading.gif" lazyload width=500 >
+<img src="屏幕截图%202022-03-16%20144016.png" srcset="/img/loading.gif" lazyload width=500 >
 </div>
 
 <p>当一个带有会话标识的HTTP请求到了Web服务器后，需要在HTTP请求的处理过程中找到对应的会话数据（Session）。但是，现在存在的问题就是：如果我第一次访问网站时请求落到了左边的服务器，那么我的Session就创建在左边的服务器上了，如果我们不做处理，就不能保证接下来的请求每次都落在同一边的服务器上了。这就是Session一致性问题。</p>
@@ -393,7 +393,7 @@
 <p>在单机的情况下，会话保存在单机上，请求也是由这个机器处理，因此不会有问题。当Web服务器变为多台以后，如果保证同一个会话的请求都在同一个Web服务器上处理，则对该会话来说，与之前单机的情况是一样的。</p>
 <p>如果要做到这样，就需要<strong>负载均衡器能够根据每次请求的会话标识SessionID来进行请求转发</strong>，如下图所示。这种方式称之为Session Stiky方式。</p>
 <div align="center">
-<img src="./img/屏幕截图%202022-03-16%20144304.png" srcset="/img/loading.gif" lazyload width=500 >
+<img src="屏幕截图%202022-03-16%20144304.png" srcset="/img/loading.gif" lazyload width=500 >
 </div>
 该方案本身非常简单，对于Web服务器来说，该方案和单机的情况是一样的，只是我们在负载均衡器上做了手脚。这个方案可以让同样Session的请求每次都发送到同一个Web服务器来处理，非常利于针对Session进行服务端本地的缓存。
 
@@ -410,7 +410,7 @@
 </ul>
 <ol start="2">
 <li>Session Replication<div align="center">
-<img src="./img/屏幕截图%202022-03-16%20144554.png" srcset="/img/loading.gif" lazyload width=500 >
+<img src="屏幕截图%202022-03-16%20144554.png" srcset="/img/loading.gif" lazyload width=500 >
 </div></li>
 </ol>
 <p>可以看到，在Session Replication方中，不再要求负载均衡器来保证同一个会话地多次请求必须到同一个Web服务器上了。而我们的Web服务器之间则增加了会话数据的同步。通过同步就保证了不同Web服务器之间的Session数据的一致。</p>
@@ -422,7 +422,7 @@
 </li>
 <li><p>Session数据集中存储</p>
 <div align="center">
-<img src="./img/屏幕截图%202022-03-16%20144812.png" srcset="/img/loading.gif" lazyload width=500 >
+<img src="屏幕截图%202022-03-16%20144812.png" srcset="/img/loading.gif" lazyload width=500 >
 </div></li>
 </ol>
 <p>不同的地方是，Web服务器之间没有Session数据复制，并且Session数据也不是保存在本机了，而是放在了另一个集中存储的地方。这样，无论是哪台Web服务器，也无论修改的是哪个Session的数据，最终的修改都发生在这个集中存储的地方，而Web服务器使用Session数据时，也是从这个集中存储Session数据的地方来读取。对于Session数据存储的具体方式，可以使用数据库，也可以使用其他分布式存储系统。这个方案解决了Session Replication方案中内存的问题，而对于网络带宽，该方案也比Session Replication要好。</p>
@@ -433,7 +433,7 @@
 </ul>
 <ol start="4">
 <li>Cookie Based<br>对于Cookie Based方案，它对同一个会话的不同请求也是不限制具体处理机器的。与Session Replication和Session数据集中管理的方案不同，这个方案是通过Cookie来传递Session数据的。具体如下图所示。<div align="center">
-<img src="./img/屏幕截图%202022-03-16%20145008.png" srcset="/img/loading.gif" lazyload width=500 >
+<img src="屏幕截图%202022-03-16%20145008.png" srcset="/img/loading.gif" lazyload width=500 >
 </div></li>
 </ol>
 <p>可以看出，我们的Session数据存放在Cookie中，然后在Web服务器上从Cookie中生成对应的Session数据。这就好比我每次都把自己的碗筷带在身上，这样我去哪家饭店吃饭就可以随意选择了。相对于前面的集中存储，这个方案不会依赖外部的一个存储系统，也就不存在从外部系统获取、写入Session数据的网络时延和不稳定性了。</p>
@@ -449,7 +449,7 @@
 <p>综合而言，上述所有方案都是解决session问题的方案，对于大型网站来说，Session Sticky和Session集中管理是比较好的方案。</p>
 <p><strong>redis管理机制</strong></p>
 <div align="center">
-<img src="./img/屏幕截图%202022-03-16%20150041.png" srcset="/img/loading.gif" lazyload width=500 >
+<img src="屏幕截图%202022-03-16%20150041.png" srcset="/img/loading.gif" lazyload width=500 >
 </div>
 
 <p>redis的session管理是利用spring提供的session管理解决方案,将一个应用session交给Redis存储,整个应用中所有session的请求都会去redis中获取对应的session数据，是Session集中管理的实现方案。</p>
@@ -561,8 +561,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/05/09/JWT/" title="jwt原理">
-                        <span class="hidden-mobile">jwt原理</span>
+                      <a href="/2022/05/08/java%E6%B3%9B%E5%9E%8B%E9%97%AE%E9%A2%98/" title="java 泛型十问">
+                        <span class="hidden-mobile">java 泛型十问</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
