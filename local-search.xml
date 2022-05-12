@@ -17,19 +17,6 @@
   
   
   <entry>
-    <title></title>
-    <link href="/2022/05/12/myBlog%20bug%E6%B1%87%E6%80%BB/"/>
-    <url>/2022/05/12/myBlog%20bug%E6%B1%87%E6%80%BB/</url>
-    
-    <content type="html"><![CDATA[<h1 id="SNAPSHOT-0-0-1"><a href="#SNAPSHOT-0-0-1" class="headerlink" title="SNAPSHOT-0.0.1"></a>SNAPSHOT-0.0.1</h1><h2 id="1-后台管理页面博客分类不显示"><a href="#1-后台管理页面博客分类不显示" class="headerlink" title="1. 后台管理页面博客分类不显示"></a>1. 后台管理页面博客分类不显示</h2><p><img src="/./myBlog%20bug%E6%B1%87%E6%80%BB/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-05-12%20143625.png"></p><h2 id="2-编辑博客页面博客标题会被重置为“title”-分类会被清空。"><a href="#2-编辑博客页面博客标题会被重置为“title”-分类会被清空。" class="headerlink" title="2. 编辑博客页面博客标题会被重置为“title”,分类会被清空。"></a>2. 编辑博客页面博客标题会被重置为“title”,分类会被清空。</h2><p><img src="/myBlog%20bug%E6%B1%87%E6%80%BB/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-05-12%20143856.png"></p><h2 id="3-新增博客后不会提示新增成功"><a href="#3-新增博客后不会提示新增成功" class="headerlink" title="3. 新增博客后不会提示新增成功"></a>3. 新增博客后不会提示新增成功</h2><h2 id="4-footer不贴底边会很丑。"><a href="#4-footer不贴底边会很丑。" class="headerlink" title="4. footer不贴底边会很丑。"></a>4. footer不贴底边会很丑。</h2>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>jwt原理</title>
     <link href="/2022/05/09/jwt%E5%8E%9F%E7%90%86/"/>
     <url>/2022/05/09/jwt%E5%8E%9F%E7%90%86/</url>
